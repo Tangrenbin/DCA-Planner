@@ -19,11 +19,12 @@ python3 -m http.server 8000
 
 然后在浏览器打开：
 
-`http://localhost:8000/DCA-Planner.html`
+`http://localhost:8000/`
 
 ## 项目结构
 ```text
 .
+├── index.html         # 默认入口（静态托管首页，自动跳转到主页面）
 ├── DCA-Planner.html   # 主页面（HTML + CSS + JavaScript）
 └── README.md          # 项目说明
 ```
