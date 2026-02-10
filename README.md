@@ -51,3 +51,11 @@ python3 -m http.server 8000
 - 本工具用于收益测算演示，不构成任何投资建议。
 - 预期收益率为固定假设值，实际市场表现可能明显偏离。
 - 当前仓库未配置自动化测试，修改后请至少手动验证：输入校验、结果渲染、TXT 导出、主题切换和移动端布局。
+
+## 收益率参考
+- [标普500指数按年份回报](https://us500.com/tools/returns/sp500-returns-by-year)
+- [纳斯达克100指数按年份回报](https://www.slickcharts.com/nasdaq100/returns)
+- [黄金按年份回报](https://www.macrotrends.net/datasets/1333/historical-gold-prices-100-year-chart)
+- [债券按年份回报](https://www.macrotrends.net/2519/us-10-year-treasury-yield-chart)
+
+
