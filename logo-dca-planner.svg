@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">DCA Planner Logo</title>
+  <desc id="logoDesc">Dark finance badge with recurring investment rings and a golden growth arrow.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="14" y1="12" x2="114" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1f2c49"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="34" y1="86" x2="98" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="barGradient" x1="30" y1="94" x2="84" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bgGradient)"/>
+  <rect x="18" y="18" width="92" height="92" rx="22" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(148, 163, 184, 0.42)" stroke-width="1.6"/>
+
+  <circle cx="64" cy="64" r="33" fill="none" stroke="rgba(148, 163, 184, 0.32)" stroke-width="5"/>
+  <circle cx="64" cy="64" r="21" fill="none" stroke="rgba(148, 163, 184, 0.28)" stroke-width="4"/>
+
+  <circle cx="64" cy="31" r="3.2" fill="#f8fafc"/>
+  <circle cx="87" cy="41" r="3.2" fill="#f8fafc"/>
+  <circle cx="97" cy="64" r="3.2" fill="#f8fafc"/>
+  <circle cx="41" cy="87" r="3.2" fill="#f8fafc"/>
+
+  <rect x="34" y="73" width="9" height="15" rx="2.4" fill="url(#barGradient)"/>
+  <rect x="49" y="66" width="9" height="22" rx="2.4" fill="url(#barGradient)"/>
+  <rect x="64" y="58" width="9" height="30" rx="2.4" fill="url(#barGradient)"/>
+
+  <path d="M34 82 C46 72 57 68 68 58 C77 50 86 42 94 35" fill="none" stroke="url(#accentGradient)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M94 35 L90 46 L103 40 Z" fill="#f59e0b"/>
+</svg>

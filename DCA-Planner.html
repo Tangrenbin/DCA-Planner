@@ -89,15 +89,45 @@
       margin: 0 auto;
     }
 
-    h1 {
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
       margin: 0 0 2rem;
+    }
+
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 8px 20px rgba(245, 158, 11, 0.35));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    h1 {
+      margin: 0;
       font-size: 2.25rem;
       font-weight: 800;
-      text-align: center;
+      text-align: left;
       background: linear-gradient(to right, #6366f1, #3b82f6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -0.025em;
+    }
+
+    .brand-subtitle {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
     }
 
     .panel {
@@ -317,6 +347,20 @@
     }
 
     @media (max-width: 640px) {
+      .brand {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .brand-logo {
+        width: 56px;
+        height: 56px;
+      }
+
+      .brand-text {
+        align-items: center;
+      }
+
       .controls {
         grid-template-columns: 1fr;
       }
@@ -328,6 +372,7 @@
       
       h1 {
         font-size: 1.75rem;
+        text-align: center;
       }
       
       body {
@@ -343,7 +388,13 @@
     <span class="theme-text">切换主题</span>
   </button>
   <div class="container">
-    <h1>定投收益计算器</h1>
+    <div class="brand">
+      <img class="brand-logo" src="logo-dca-planner.svg" alt="定投收益计算器 Logo">
+      <div class="brand-text">
+        <h1>定投收益计算器</h1>
+        <p class="brand-subtitle">DCA Planner</p>
+      </div>
+    </div>
 
     <div class="panel">
       <div class="controls">
