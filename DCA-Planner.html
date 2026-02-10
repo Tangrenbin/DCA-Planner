@@ -27,6 +27,11 @@
       --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
       --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
       --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --footer-bg: linear-gradient(135deg, #1b485d 0%, #143a4d 100%);
+      --footer-border: rgba(45, 212, 191, 0.4);
+      --footer-link: #5eead4;
+      --footer-link-hover: #99f6e4;
+      --footer-separator: rgba(153, 246, 228, 0.9);
     }
 
     [data-theme="dark"] {
@@ -41,6 +46,11 @@
       --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
       --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
       --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+      --footer-bg: linear-gradient(135deg, #13394b 0%, #0d2b3a 100%);
+      --footer-border: rgba(45, 212, 191, 0.35);
+      --footer-link: #2dd4bf;
+      --footer-link-hover: #5eead4;
+      --footer-separator: rgba(94, 234, 212, 0.78);
     }
 
     .top-actions {
@@ -366,6 +376,51 @@
       box-shadow: var(--shadow-sm);
     }
 
+    .reference-footer {
+      margin-top: 2rem;
+      background: var(--footer-bg);
+      border: 1px solid var(--footer-border);
+      border-radius: 0.35rem;
+      padding: 0.85rem 1rem;
+    }
+
+    .reference-links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .reference-links li {
+      display: flex;
+      align-items: center;
+      color: var(--footer-separator);
+      font-size: 0.9rem;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .reference-links li + li::before {
+      content: "|";
+      margin: 0 0.75rem;
+      color: var(--footer-separator);
+      font-weight: 500;
+    }
+
+    .reference-links a {
+      color: var(--footer-link);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .reference-links a:hover {
+      text-decoration: underline;
+      color: var(--footer-link-hover);
+    }
+
     @keyframes slideUp {
       from {
         opacity: 0;
@@ -407,6 +462,24 @@
 
       .controls {
         grid-template-columns: 1fr;
+      }
+
+      .reference-footer {
+        padding: 0.8rem 0.75rem;
+      }
+
+      .reference-links {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .reference-links li {
+        font-size: 0.8rem;
+      }
+
+      .reference-links li + li::before {
+        content: none;
+        margin: 0;
       }
       
       .plan-header {
@@ -460,6 +533,15 @@
     <div id="result" class="plans">
       <div class="empty">输入金额后点击“计算收益”查看结果。</div>
     </div>
+
+    <footer class="reference-footer" aria-label="收益率参考链接">
+      <ul class="reference-links">
+        <li><a href="https://us500.com/tools/returns/sp500-returns-by-year" target="_blank" rel="noopener noreferrer">标普500指数按年份回报</a></li>
+        <li><a href="https://www.slickcharts.com/nasdaq100/returns" target="_blank" rel="noopener noreferrer">纳斯达克100指数按年份回报</a></li>
+        <li><a href="https://www.macrotrends.net/datasets/1333/historical-gold-prices-100-year-chart" target="_blank" rel="noopener noreferrer">黄金按年份回报</a></li>
+        <li><a href="https://www.macrotrends.net/2519/us-10-year-treasury-yield-chart" target="_blank" rel="noopener noreferrer">债券按年份回报</a></li>
+      </ul>
+    </footer>
   </div>
 
   <script>
