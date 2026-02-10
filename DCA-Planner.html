@@ -43,12 +43,42 @@
       --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
     }
 
-    .theme-toggle {
+    .top-actions {
       position: fixed;
       top: 1rem;
       right: 1rem;
-      /* width: 3rem; Removed fixed width */
-      /* height: 3rem; Removed fixed height */
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+
+    .top-link-btn {
+      padding: 0.5rem 0.9rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+      white-space: nowrap;
+    }
+
+    .top-link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .theme-toggle {
       padding: 0.5rem 1rem;
       border-radius: 2rem;
       gap: 0.5rem;
@@ -63,7 +93,6 @@
       cursor: pointer;
       box-shadow: var(--shadow-md);
       transition: all 0.3s ease;
-      z-index: 1000;
       backdrop-filter: blur(4px);
     }
 
@@ -349,6 +378,19 @@
     }
 
     @media (max-width: 640px) {
+      .top-actions {
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 0.5rem;
+        gap: 0.35rem;
+      }
+
+      .top-link-btn,
+      .theme-toggle {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.75rem;
+      }
+
       .brand {
         flex-direction: column;
         gap: 0.75rem;
@@ -378,17 +420,21 @@
       }
       
       body {
-        padding: 1rem;
+        padding: 3.75rem 1rem 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <button id="themeToggle" class="theme-toggle" aria-label="切换主题">
-    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    <span class="theme-text">切换主题</span>
-  </button>
+  <div class="top-actions">
+    <a class="top-link-btn" href="普通打工人方案.html">普通打工人方案</a>
+    <a class="top-link-btn" href="专业投资者方案.html">专业投资者方案</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="切换主题">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span class="theme-text">切换主题</span>
+    </button>
+  </div>
   <div class="container">
     <div class="brand">
       <img class="brand-logo" src="logo-dca-planner.svg" alt="定投收益计算器 Logo">
